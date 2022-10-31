@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1 th:text="${blog.getBlogName()}"></h1>
+<p>
+  <a href="/blogs">Black to list</a>
+</p>
+<table border="0" cellspacing="0" cellpadding="5px" width="800px">
+  <tr>
+    <th>Title: </th>
+    <td th:text="${blog.getBlogName()}"></td>
+  </tr>
+
+  <tr>
+    <th>Category</th>
+    <td th:text="${blog.getCategory().getCategoryName()}"></td>
+  </tr>
+
+  <tr>
+    <th>Author: </th>
+    <td th:text="${blog.getAuthor()}"></td>
+  </tr>
+
+  <tr>
+    <th>Content: </th>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td th:text="${blog.getContent()}"></td>
+  </tr>
+</table>
+</body>
+</html>
